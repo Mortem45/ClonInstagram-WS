@@ -1,0 +1,30 @@
+{
+  "name": "cloninstagram-ws",
+  "version": "1.0.0",
+  "description": "ClonInstagram Realtime Backend",
+  "scripts": {
+    "lint": "standard",
+    "start": "node server.js"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mortem45/ClonInstagram-WS.git"
+  },
+  "author": "Brandon Monterrozo (ste45_007@hotmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mortem45/ClonInstagram-WS/issues"
+  },
+  "homepage": "https://github.com/Mortem45/ClonInstagram-WS#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "rethinkdb": "^2.3.3",
+    "socket.io": "^2.2.0"
+  }
+}

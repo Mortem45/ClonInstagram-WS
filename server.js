@@ -12,7 +12,7 @@ const port = process.env.PORT || 5151
 r.connect(config.db, (err, conn) => {
   if (err) return console.error(err.message)
 
-  r.table('imagenes').changes().run(conn, (err, cursor) => {
+  r.table('images').changes().run(conn, (err, cursor) => {
     if (err) return console.error(err.message)
 
     cursor.on('data', data => {

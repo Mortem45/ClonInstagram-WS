@@ -17,8 +17,9 @@ r.connect(config.db, (err, conn) => {
 
     cursor.on('data', data => {
       let image = data.new_val
+      let imageOld = data.old_val
 
-      if (image.publicId != null) {
+      if (image.publicId != null && (imageOld.likes == image.likes) ) {
         io.sockets.emit('image', image)
       }
     })

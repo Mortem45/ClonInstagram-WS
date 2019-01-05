@@ -2,9 +2,9 @@
 
 const config = {
   db: {
-    host: 'localhost',
+    host: 'mortem45.com',
     port: 28015,
-    db: 'instagram'
+    db: 'cloninstagram'
   }
 }
 

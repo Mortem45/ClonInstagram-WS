@@ -14,14 +14,12 @@ r.connect(config.db, (err, conn) => {
 
   r.table('images').changes().run(conn, (err, cursor) => {
     if (err) return console.error(err.message)
-
     cursor.on('data', data => {
       let image = data.new_val
       let imageOld = data.old_val
-
-      if (image.publicId != null && (imageOld.likes == image.likes) ) {
+      if (image.publicId != null && (image.likes == imageOld.likes)) {
         io.sockets.emit('image', image)
-      }
+	}
     })
   })
 })
